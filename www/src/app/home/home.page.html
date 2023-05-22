@@ -1,0 +1,59 @@
+<div class="home">
+  
+  <div id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  </div>
+
+  <ion-menu contentId="main-content">
+
+    <ion-header>
+      <ion-toolbar>
+        <ion-title class="ion-padding">Usuario: {{ auth }}</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-button routerLink="/inicio-sesion">Iniciar Sesion</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button routerLink="/noticias">Noticias</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button routerLink="/catalogo">Catalogo</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button routerLink="/carrito">Carrito</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button routerLink="/orden">Orden</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button routerLink="/historial">Historial</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button>Area Entrega</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button>Estado Resultado</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button>Configuracion</ion-button>
+        </ion-item>
+        <ion-item>
+          <ion-button>Cerrar Sesion</ion-button>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+
+  </ion-menu>
+
+</div>

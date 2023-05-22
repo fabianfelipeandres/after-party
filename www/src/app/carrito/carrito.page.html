@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>carrito</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="catalogo"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-item *ngFor="let i of productos">
+        <ion-avatar slot="start">
+          <ion-img src="http://localhost:8090/api/files/{{i['collectionId']}}/{{i['id']}}/{{i['field']}}" alt=""></ion-img>    
+        </ion-avatar>
+        <ion-label>{{i['nombre']}}</ion-label>
+        <ion-label>{{i['valor']}}</ion-label>
+        <ion-button value="submit" (click)="eliminarElemento(i['id'])">borrar</ion-button>
+      </ion-item>
+      <ion-item>
+        <ion-label>Total</ion-label>
+        <ion-button value="submit" (click)="ordenar()">Pedir Orden</ion-button>
+        <ion-label>{{ total }}</ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

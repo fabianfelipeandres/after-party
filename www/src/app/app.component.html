@@ -1,0 +1,27 @@
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+  <ion-content>
+    <ion-tabs>
+      <ion-tab-bar slot="bottom">
+        <ion-tab-button routerLink="/noticias">
+          <ion-icon name="newspaper-outline"></ion-icon>
+          Noticias
+        </ion-tab-button>
+        <ion-tab-button routerLink="/catalogo">
+          <ion-icon name="list-outline"></ion-icon>
+          Catalogo
+        </ion-tab-button>
+        <ion-tab-button routerLink="/carrito">
+          <ion-icon name="bag-handle-outline"></ion-icon>
+          <ion-badge>{{ this.getcantidad() }}</ion-badge>
+
+          Carrito
+        </ion-tab-button>
+        <ion-tab-button routerLink="/historial">
+          <ion-icon name="document-text-outline"></ion-icon>
+          historial
+        </ion-tab-button>
+      </ion-tab-bar>
+    </ion-tabs>
+  </ion-content>
+</ion-app>

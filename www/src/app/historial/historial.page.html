@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>historial</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Nº Orden</ion-col>
+          <ion-col>productos</ion-col>
+          <ion-col>total</ion-col>
+          <ion-col>Status</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-item *ngFor="let hero of orden">
+        <ion-label>{{hero['id_orden']}}</ion-label>
+        <ion-label>{{hero['cantidad_productos']}}</ion-label>
+        <ion-label>{{hero['precio_orden']}}</ion-label>  
+        <ion-label>{{hero['comuna']}}</ion-label>    
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
