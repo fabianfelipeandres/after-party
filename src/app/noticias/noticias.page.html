@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>noticias</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-list>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Nº Modificacion</ion-col>
+          <ion-col>Modificacion</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-item *ngFor="let hero of noticias">
+        <ion-label>{{hero['id_modificacion']}}</ion-label>
+        <ion-label>{{hero['modificacion']}}</ion-label> 
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>

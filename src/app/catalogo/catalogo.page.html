@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>catalogo</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let hero of resultdata" [routerLink]="['/profile/' + hero['id']]">
+      <ion-avatar slot="start">
+        <ion-img src="http://localhost:8090/api/files/{{hero['collectionId']}}/{{hero['id']}}/{{hero['field']}}" alt=""></ion-img>    
+      </ion-avatar>
+      <ion-label>{{hero['nombre']}}</ion-label>
+      <ion-label>{{hero['valor']}}</ion-label>    
+    </ion-item>
+  </ion-list>
+</ion-content>
+
