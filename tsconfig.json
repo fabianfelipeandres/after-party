@@ -24,6 +24,20 @@
     ],
     "useDefineForClassFields": false
   },
+    "include": [
+    "src/app/app.component.ts",
+    "src/app/carrito/carrito.page.ts",
+    "src/app/catalogo/catalogo.page.ts",
+    "src/app/historial/historial.page.ts",
+    "src/app/home/home.page.ts",
+    "src/app/inicio-sesion/inicio-sesion.page.ts",
+    "src/app/noticias/noticias.page.ts",
+    "src/app/orden/orden.page.ts",
+    "src/app/profile/profile.page.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
     "strictInjectionParameters": true,
